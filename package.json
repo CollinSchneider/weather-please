@@ -1,0 +1,20 @@
+{
+  "name": "weather-please",
+  "version": "3.1.2",
+  "description": "",
+  "main": "weather.js",
+  "dependencies": {
+    "dotenv": "^2.0.0",
+    "figlet": "^1.2.0",
+    "request": "^2.78.0"
+  },
+  "bin": {
+    "weather-please": "weather.js"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
