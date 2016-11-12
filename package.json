@@ -1,12 +1,13 @@
 {
   "name": "weather-please",
-  "version": "3.1.2",
+  "version": "1.1.1",
   "description": "",
   "main": "weather.js",
   "dependencies": {
     "dotenv": "^2.0.0",
     "figlet": "^1.2.0",
-    "request": "^2.78.0"
+    "request": "^2.78.0",
+    "moment": "^2.16.0"
   },
   "bin": {
     "weather-please": "weather.js"
