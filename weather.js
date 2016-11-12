@@ -10,9 +10,10 @@ var rl = readline.createInterface({
   output: process.stdout
 });
 
-rl.question("Zip code of desired weather: ", function(zip) {
-  var forecast = 'http://api.openweathermap.org/data/2.5/forecast/daily?q='+zip+'&cnt=7&units=imperial&appid='+process.env.API_KEY;
-  var current = 'http://api.openweathermap.org/data/2.5/weather?q='+zip+'&units=imperial&appid='+process.env.API_KEY;
+rl.question("City name or zip of desired weather: ", function(zip) {
+  var q = zip.replace(new RegExp(' ', 'g'), '')
+  var forecast = 'http://api.openweathermap.org/data/2.5/forecast/daily?q='+q+'&cnt=7&units=imperial&appid='+process.env.API_KEY;
+  var current = 'http://api.openweathermap.org/data/2.5/weather?q='+q+'&units=imperial&appid='+process.env.API_KEY;
   getCurrentWeather(current, forecast)
   rl.close();
 });
