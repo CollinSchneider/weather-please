@@ -1,10 +1,9 @@
 {
-  "name": "weather-please",
-  "version": "1.1.4",
-  "description": "",
+  "name": "weather-plz",
+  "version": "2.0.0",
+  "description": "After installing with npm install weather-please Run 'weather-please' from the command line",
   "main": "weather.js",
   "dependencies": {
-    "dotenv": "^2.0.0",
     "figlet": "^1.2.0",
     "request": "^2.78.0",
     "moment": "^2.16.0"
@@ -17,5 +16,13 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CollinSchneider/weather-please.git"
+  },
+  "bugs": {
+    "url": "https://github.com/CollinSchneider/weather-please/issues"
+  },
+  "homepage": "https://github.com/CollinSchneider/weather-please#readme"
 }

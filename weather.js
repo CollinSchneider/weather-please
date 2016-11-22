@@ -2,7 +2,6 @@
 var request = require('request');
 var figlet = require('figlet');
 var moment = require('moment')
-require('dotenv').config();
 var readline = require('readline');
 var key = '6a39cf5424b371ecb674e6fae639cf49'
 var rl = readline.createInterface({
@@ -14,7 +13,10 @@ rl.question("City name or zip of desired weather: ", function(zip) {
   var q = zip.replace(new RegExp(' ', 'g'), '')
   var forecast = 'http://api.openweathermap.org/data/2.5/forecast/daily?q='+q+'&cnt=7&units=imperial&appid='+key;
   var current = 'http://api.openweathermap.org/data/2.5/weather?q='+q+'&units=imperial&appid='+key;
-  getCurrentWeather(current, forecast)
+  getCurrentWeather(current)
+  setTimeout(function(){
+    forecastWeather(forecast)
+  }, 0)
   rl.close();
 });
 
@@ -33,7 +35,7 @@ function forecastWeather(forecast){
   })
 }
 
-function getCurrentWeather(current, forecast){
+function getCurrentWeather(current){
   request(current, function(error, response, body){
     if (!error && response.statusCode == 200) {
       var json = JSON.parse(body)
@@ -46,7 +48,4 @@ function getCurrentWeather(current, forecast){
       })
     }
   })
-  setTimeout(function(){
-    forecastWeather(forecast)
-  }, 800)
 }
